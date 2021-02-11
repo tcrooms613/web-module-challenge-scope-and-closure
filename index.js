@@ -65,11 +65,9 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(callback){
-  let runs = Math.random(1*3);
-   return Math.round(runs);
-   callback();
+   return Math.floor(Math.random() * 3);
 }
-
+console.log(inning());
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -86,8 +84,12 @@ Use the finalScore function below to do the following:
 */ 
 
 function finalScore(callback, numInnings){
-  let finScoreObj = {}
-  callback()
+  let home = callback();
+  let away = callback();
+  for (let i = 0; i < numInnings; i++) {
+    console.log(`${i}`, home);
+    console.log(`${i}`, away);
+  }
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️

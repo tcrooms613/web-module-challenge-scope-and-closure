@@ -43,6 +43,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  -- Closure allows inner functions to reach out to variables within the parent. 
+      It also allows for functions to operate with only local variables and not have other functions or code reach into the block or function scope.
 2. Study the following code, then answer the questions below.
 
 ```js
