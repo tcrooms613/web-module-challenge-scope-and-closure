@@ -28,11 +28,13 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  -- Counter 1 uses a local variable, and Counter 2 uses a global variable.
   2. Which of the two uses a closure? How can you tell?
-  
+  -- Counter 1 uses closure because it is self contained, and is returning a function.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+  -- Counter 1 would be preferable when you are only looking to access the data within the function locally.
+     Counter 2 is preferred when you'll be using the same variable across several functions or other lines of code.
 */
 
 // counter1 code
@@ -62,8 +64,10 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(callback){
+  let runs = Math.random(1*3);
+   return Math.round(runs);
+   callback();
 }
 
 
@@ -81,8 +85,9 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(callback, numInnings){
+  let finScoreObj = {}
+  callback()
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
@@ -90,8 +95,12 @@ Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(callback) {
+  let scoreObj = {
+    "Home": callback(),
+    "Away": callback()
+  }
+  return scoreObj;
 }
 
 
