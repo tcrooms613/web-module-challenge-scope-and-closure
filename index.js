@@ -168,7 +168,6 @@ function scoreboard(callback1, callback2,numberInnings) {
 score.push(finalScore);
 return score;
 }
-console.log(scoreboard(getInningScore, inning, 9));
 
 
 
