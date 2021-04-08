@@ -84,9 +84,17 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
-}
+function finalScore(callback, numberInnings){
+  let score = {
+    "Home": 0,
+    "Away": 0
+  }
+  for (let i = 0; i <= numberInnings; ++i){
+    score.Home = callback() * numberInnings;
+    score.Away = callback() * numberInnings;
+    }
+  return score;
+  }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
