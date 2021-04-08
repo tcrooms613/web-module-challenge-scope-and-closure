@@ -28,11 +28,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+      --Counter 1 is using block-level scope
+      --Counter 2 is usung Global Scope
   2. Which of the two uses a closure? How can you tell?
-  
+      -- counter1 code is using closure because the code is all contained within the function.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+      -- COunter1 is preferred for accessing data only to one function
+      -- Counter2 is preferred for acessing a variable across many functions within the program
 */
 
 // counter1 code
